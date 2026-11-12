@@ -227,6 +227,17 @@ legend{padding:0}
 .fsm b{font:600 21px/1.3 var(--display)}
 .fsm p{color:var(--ink-2);font-size:16.5px}
 
+/* Ryan */
+.ryan .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.ryan-copy .h2{margin-bottom:18px}
+.ryan-copy>p{color:var(--ink-2);font-size:18px;line-height:1.65;max-width:620px;margin-bottom:16px}
+.ryan-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 32px;margin:30px 0 32px;max-width:560px}
+.ryan-facts dt{font:600 19px/1.3 var(--display);color:var(--ink)}
+.ryan-facts dd{margin:3px 0 0;font-size:15.5px;color:var(--mute)}
+.ryan-fig{margin:0}
+.ryan-fig img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
+.ryan-fig figcaption{margin-top:10px;font-size:15px;color:var(--mute)}
+
 /* Prices */
 .prices{container-type:inline-size;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
 .prices-img{position:relative;min-height:100%}
@@ -392,6 +403,14 @@ legend{padding:0}
   .fsm li{grid-template-columns:minmax(0,1fr);gap:4px;padding:14px 0}
   .fsm b{font-size:18px}
   .fsm p{font-size:16px}
+  .ryan .wrap{display:flex;flex-direction:column;gap:24px}
+  .ryan-fig{order:-1}
+  .ryan-fig img{aspect-ratio:4/3;object-position:50% 20%}
+  .ryan-copy>p{font-size:17px}
+  .ryan-facts{gap:16px 18px;margin:22px 0 24px}
+  .ryan-facts dt{font-size:16px}
+  .ryan-facts dd{font-size:14.5px}
+  .ryan-copy .b{width:100%}
   .prices{display:flex;flex-direction:column}
   .prices-img{display:none}
   .prices-body{padding:72px 20px}
@@ -489,6 +508,19 @@ legend{padding:0}
   "name": "Joey Sandoval",
   "jobTitle": "Owner and lead instructor"
  },
+ "employee": [
+  {
+   "@type": "Person",
+   "name": "Joey Sandoval",
+   "jobTitle": "Owner and lead instructor"
+  },
+  {
+   "@type": "Person",
+   "name": "Ryan Hogan",
+   "jobTitle": "Golf instructor",
+   "knowsAbout": ["Golf instruction", "Mental game coaching", "TPI golf fitness"]
+  }
+ ],
  "knowsAbout": [
   "Golf lessons",
   "RoboGolfPro",
@@ -672,6 +704,7 @@ legend{padding:0}
         <li><button class="menu-a" type="button" aria-expanded="false" aria-controls="dd-about">About<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
           <ul class="dd" id="dd-about">
             <li><a href="#joey">Joey Sandoval</a></li>
+            <li><a href="#ryan">Ryan Hogan</a></li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact and hours</a></li>
@@ -702,7 +735,7 @@ legend{padding:0}
         <ul class="dg" id="dg-tech"><li><a href="#" data-demo>RoboGolfPro</a></li><li><a href="#" data-demo>TrackMan</a></li><li><a href="#" data-demo>Sportsbox AI</a></li><li><a href="#" data-demo>SAM PuttLab</a></li><li><a href="#" data-demo>PuttView</a></li></ul></li>
       <li><a class="dl-a" href="#" data-demo>Fitness</a></li>
       <li><button class="dg-btn" type="button" aria-expanded="false" aria-controls="dg-about">About<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
-        <ul class="dg" id="dg-about"><li><a href="#joey">Joey Sandoval</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact and hours</a></li></ul></li>
+        <ul class="dg" id="dg-about"><li><a href="#joey">Joey Sandoval</a></li><li><a href="#ryan">Ryan Hogan</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact and hours</a></li></ul></li>
     </ul>
     <div class="drawer-foot">
       <a class="b b-s" href="tel:+12398491902">Call (239) 849-1902</a>
@@ -762,7 +795,7 @@ legend{padding:0}
           <fieldset class="set" id="wantSet">
             <legend class="vh">What do you want to book?</legend>
             <div class="chips">
-              <label class="chip"><input type="radio" name="want" value="Lesson"><span>Private lesson<small>All ages and levels</small></span></label>
+              <label class="chip"><input type="radio" name="want" value="Lesson"><span>Private lesson<small>With Joey or Ryan</small></span></label>
               <label class="chip"><input type="radio" name="want" value="RoboGolfPro"><span>RoboGolfPro<small>$250 an hour</small></span></label>
               <label class="chip"><input type="radio" name="want" value="Bay rental"><span>Bay rental<small>$65 an hour</small></span></label>
               <label class="chip"><input type="radio" name="want" value="Club fitting"><span>Club fitting<small>PXG or putter</small></span></label>
@@ -823,7 +856,7 @@ legend{padding:0}
     </figure>
     <div class="joey-copy">
       <h2 class="h2" id="joeyH">Your Naples golf coach, Joey Sandoval</h2>
-      <p>Joey owns The Golf Club and teaches most of its lessons. He comes from golf fitness and performance training, so he coaches the body that makes the swing, not just the club.</p>
+      <p>Joey owns The Golf Club and leads its coaching. He comes from golf fitness and performance training, so he coaches the body that makes the swing, not just the club.</p>
       <p>Every lesson works the same loop, and you leave with a plan instead of a list of tips.</p>
       <ul class="fsm">
         <li><b>Feel it</b><p>RoboGolfPro guides you through takeaway, transition and impact until the motion is yours.</p></li>
@@ -831,6 +864,27 @@ legend{padding:0}
         <li><b>Measure it</b><p>TrackMan reads club and ball speed, launch, spin, path and carry, so you know the change is real.</p></li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section class="sec ryan" id="ryan" aria-labelledby="ryanH">
+  <div class="wrap">
+    <div class="ryan-copy">
+      <h2 class="h2" id="ryanH">Lessons with Ryan Hogan</h2>
+      <p>Ryan grew up in the game: 9 years of competitive golf, 7 years of coaching, and he still plays local mini tours. A baseball background showed him how much raw athleticism matters in a golf swing.</p>
+      <p>His time at the Sean Foley Performance Academy taught him that no two golfers get better the same way, so every student gets their own routine and their own feedback. He coaches the mental side too, the part that decides whether your range swing shows up on the course.</p>
+      <dl class="ryan-facts">
+        <div><dt>TPI Level 1</dt><dd>Certified</dd></div>
+        <div><dt>Sean Foley Performance Academy</dt><dd>Trained</dd></div>
+        <div><dt>7 years</dt><dd>Coaching</dd></div>
+        <div><dt>100+ golfers</dt><dd>Beginner to scratch</dd></div>
+      </dl>
+      <a class="b b-p" href="#book" data-want="Lesson" data-coach="Ryan">Book a lesson with Ryan</a>
+    </div>
+    <figure class="ryan-fig">
+      <img src="assets/img/ryan-hogan-golf-instructor-tgc-naples.jpg" alt="Golf instructor Ryan Hogan at the top of his swing on a Southwest Florida range" width="720" height="900" loading="lazy">
+      <figcaption>Ryan Hogan, golf instructor. Photo: Bold Vision Productions.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -971,7 +1025,7 @@ legend{padding:0}
       <div class="fl"><h2>Bays and fitting</h2><button class="fl-btn" type="button" aria-expanded="false" aria-controls="fl2">Bays and fitting<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
         <ul id="fl2"><li><a href="#prices">Bay rentals</a></li><li><a href="#prices">Memberships</a></li><li><a href="#" data-demo>PXG club fitting</a></li><li><a href="#" data-demo>Putter fitting</a></li><li><a href="#" data-demo>Technology</a></li></ul></div>
       <div class="fl"><h2>About</h2><button class="fl-btn" type="button" aria-expanded="false" aria-controls="fl3">About<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
-        <ul id="fl3"><li><a href="#joey">Joey Sandoval</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#" data-demo>Gift cards</a></li></ul></div>
+        <ul id="fl3"><li><a href="#joey">Joey Sandoval</a></li><li><a href="#ryan">Ryan Hogan</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#" data-demo>Gift cards</a></li></ul></div>
     </div>
   </div>
   <div class="foot-bot">
@@ -1082,6 +1136,8 @@ if ('scrollRestoration' in history) { history.scrollRestoration = 'auto'; }
     el.addEventListener('click', function(){
       var v = el.getAttribute('data-want'), r = form.querySelector('input[name=want][value="' + v + '"]');
       if (r) { r.checked = true; wantSet.classList.remove('err'); }
+      var c = el.getAttribute('data-coach'), note = document.getElementById('note');
+      if (c && !note.value) note.value = 'I would like a lesson with ' + c + '.';
     });
   });
   document.getElementById('toStep2').addEventListener('click', function(){
