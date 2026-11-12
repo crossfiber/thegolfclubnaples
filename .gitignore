@@ -1,0 +1,42 @@
+# This folder is the site and nothing else. Private docs live one level up (docs/, build/, seo/),
+# so nothing below should ever exist here. The list stays as a safety net.
+# Local-only project docs. Never pushed, never deployed.
+README.md
+CHANGELOG.md
+qa/
+credentials.md
+design-direction.md
+borrowed-patterns.md
+HANDOFF.md
+deploy.py
+_manifest.json
+
+# Generators and build scripts belong in ../build/, never here.
+*.py
+*.ps1
+*.bat
+*.sh
+_build/
+*.xlsx
+*.csv
+
+# Secrets, always.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+github-pat.txt
+
+# Scratch.
+_RecycleBin/
+_research/
+swipes/
+runs/
+__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db
+
+# SEO working files (keywords, audits), local only
+seo/
