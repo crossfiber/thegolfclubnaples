@@ -181,16 +181,16 @@ body.drawer-open .drawer{transform:none}
 .fsm b{font:600 21px/1.3 var(--display)}
 .fsm p{color:var(--ink-2);font-size:17px}
 
-/* Ryan */
-.ryan .wrap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
-.ryan-copy .h2{margin-bottom:18px}
-.ryan-copy>p{color:var(--ink-2);font-size:19px;line-height:1.65;max-width:620px;margin-bottom:16px}
-.ryan-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 32px;margin:28px 0 32px;padding:0;list-style:none;max-width:640px}
-.ryan-list b{display:block;font:600 19px/1.3 var(--display);color:var(--ink);margin-bottom:4px}
-.ryan-list span{display:block;font-size:15px;line-height:1.5;color:var(--ink-2)}
-.ryan-fig{margin:0}
-.ryan-fig img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
-.ryan-fig figcaption{margin-top:10px;font-size:15px;color:var(--mute)}
+/* Studio */
+.studio-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:56px;align-items:end;margin-bottom:36px}
+.tour{display:grid;grid-template-columns:minmax(0,3fr) repeat(2,minmax(0,2fr));gap:24px 20px;margin:0;padding:0;list-style:none}
+.tour figure{margin:0;height:100%;display:flex;flex-direction:column}
+.tour img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.tour .t-big{grid-row:span 2}
+.tour .t-big img{flex:1 1 0;min-height:0;aspect-ratio:auto}
+.tour figcaption{padding-top:10px;font-size:15px;line-height:1.4;color:var(--mute)}
+.tour figcaption b{display:block;font:600 17px/1.3 var(--display);color:var(--ink)}
+
 
 /* Prices */
 .prices-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:36px}
@@ -201,18 +201,17 @@ body.drawer-open .drawer{transform:none}
 .prices .rating:hover{color:var(--ink)}
 .ptabs{display:none}
 .pcards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.pcard{display:flex;flex-direction:column;background:#fff;box-shadow:var(--shadow-1);padding:26px 24px 24px}
-.pcard h3{font-size:19px;font-weight:600;line-height:1.25}
-.pbig{margin:14px 0 12px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
-.pbig b{font:700 41px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
-.pbig span{font-size:15px;color:var(--mute)}
-.pdesc{font-size:17px;line-height:1.5;color:var(--ink-2)}
-.prows{margin:4px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
+.pcard{display:grid;grid-row:span 5;grid-template-rows:subgrid;row-gap:0;background:#fff;box-shadow:var(--shadow-1);padding:26px 24px 24px}
+.pcard h3{grid-row:1;font-size:19px;font-weight:600;line-height:1.25}
+.pbig{grid-row:2;margin:16px 0 16px}
+.pbig b{display:block;font:700 41px/1 var(--display);letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.pbig span{display:block;margin-top:8px;font-size:15px;line-height:1.35;color:var(--mute)}
+.pdesc{grid-row:3;font-size:17px;line-height:1.5;color:var(--ink-2)}
+.prows{grid-row:4;margin:16px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
 .prows li{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px;line-height:1.35;color:var(--ink-2)}
 .prows small{display:block;font-size:14px;color:var(--mute)}
 .prows b{font:600 15px/1.35 var(--display);color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums}
-.pcard .svc-go{margin-top:auto;padding-top:20px}
-.pcard .pdesc+.prows{margin-top:14px}
+.pcard .svc-go{grid-row:5;align-self:end;justify-self:start;margin-top:0;padding-top:24px}
 
 /* Reviews */
 .rev-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;align-items:end;margin-bottom:44px}
@@ -349,22 +348,25 @@ body.drawer-open .drawer{transform:none}
   .fsm li{grid-template-columns:minmax(0,1fr);gap:4px;padding:14px 0}
   .fsm b{font-size:19px}
   .fsm p{font-size:17px}
-  .ryan .wrap{display:flex;flex-direction:column;gap:24px}
-  .ryan-fig{order:-1}
-  .ryan-fig img{aspect-ratio:4/3;object-position:50% 20%}
-  .ryan-copy>p{font-size:17px}
-  .ryan-list{grid-template-columns:minmax(0,1fr);gap:14px;margin:20px 0 24px}
-  .ryan-list b{font-size:17px;margin-bottom:2px}
-  .ryan-copy .b{width:100%}
+  .studio-head{display:block;margin-bottom:20px}
+  .studio-head .lede{margin-top:12px}
+  .tour{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 -20px;padding:0 20px;scroll-padding:0 20px}
+  .tour::-webkit-scrollbar{display:none}
+  .tour li{flex:0 0 78%;scroll-snap-align:center}
+  .tour .t-big img{flex:none;aspect-ratio:4/3}
+  .tour figcaption b{font-size:16px}
   .prices-head{display:block;margin-bottom:20px}
   .prices .rating{margin-top:12px}
   .ptabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-bottom:12px}
   .ptab{min-height:44px;padding:0 4px;font:600 14px/1.1 var(--display);color:var(--ink);background:transparent;border:0;box-shadow:inset 0 0 0 1.5px #C9D1C8;cursor:pointer}
   .ptab[aria-selected="true"]{background:var(--ink-2);color:#fff;box-shadow:none}
-  .pcards{display:block}
-  .pcard{display:none;padding:22px 20px}
-  .pcard.on{display:flex}
+  .pcards{display:grid;grid-template-columns:minmax(0,1fr)}
+  .pcard{grid-area:1/1;display:flex;flex-direction:column;visibility:hidden;padding:22px 20px 20px}
+  .pcard.on{visibility:visible}
+  .pbig{display:flex;align-items:baseline;gap:10px;margin:12px 0 12px}
   .pbig b{font-size:34px}
+  .pbig span{margin:0}
+  .pcard .svc-go{margin-top:auto;padding-top:20px;align-self:flex-start}
   .rev-top{display:flex;flex-direction:column;gap:24px;align-items:stretch;margin-bottom:28px}
   .feat p{font-size:21px}
   .rev-score .big{font-size:41px}
@@ -394,6 +396,41 @@ body.drawer-open .drawer{transform:none}
   .foot-bot .wrap{flex-direction:column;align-items:flex-start;gap:12px}
 }
 </style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ImageGallery",
+ "name": "Inside The Golf Club indoor golf studio in Naples",
+ "url": "https://crossfiber.github.io/thegolfclubnaples/#studio",
+ "image": [
+  {
+   "@type": "ImageObject",
+   "contentUrl": "https://crossfiber.github.io/thegolfclubnaples/assets/img/indoor-golf-studio-naples-tgc.jpg",
+   "caption": "Indoor putting green and simulator bays at The Golf Club, Naples"
+  },
+  {
+   "@type": "ImageObject",
+   "contentUrl": "https://crossfiber.github.io/thegolfclubnaples/assets/img/golf-simulator-bay-trackman-tgc-naples.jpg",
+   "caption": "Golf simulators: 4 TrackMan bays"
+  },
+  {
+   "@type": "ImageObject",
+   "contentUrl": "https://crossfiber.github.io/thegolfclubnaples/assets/img/robotic-swing-trainer-robogolfpro-tgc-naples.jpg",
+   "caption": "Robotic swing trainer: RoboGolfPro"
+  },
+  {
+   "@type": "ImageObject",
+   "contentUrl": "https://crossfiber.github.io/thegolfclubnaples/assets/img/3d-swing-analysis-sportsbox-tgc-naples.jpg",
+   "caption": "3D swing analysis: Sportsbox AI"
+  },
+  {
+   "@type": "ImageObject",
+   "contentUrl": "https://crossfiber.github.io/thegolfclubnaples/assets/img/putting-green-puttview-tgc-naples.jpg",
+   "caption": "Putting green with projected reads: PuttView"
+  }
+ ]
+}
+</script>
 <script type="application/ld+json">
 {
  "@context": "https://schema.org",
@@ -472,19 +509,14 @@ body.drawer-open .drawer{transform:none}
    "@type": "Person",
    "name": "Joey Sandoval",
    "jobTitle": "Owner and lead instructor"
-  },
-  {
-   "@type": "Person",
-   "name": "Ryan Hogan",
-   "jobTitle": "Golf instructor",
-   "knowsAbout": [
-    "Golf instruction",
-    "Practice planning",
-    "Mental performance coaching",
-    "Golf speed training",
-    "Golf warm-up and injury prevention"
-   ]
   }
+ ],
+ "amenityFeature": [
+  {"@type": "LocationFeatureSpecification", "name": "Golf simulator bays (TrackMan)", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "Robotic swing trainer (RoboGolfPro)", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "3D swing analysis (Sportsbox AI)", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "Indoor putting green (PuttView)", "value": true},
+  {"@type": "LocationFeatureSpecification", "name": "Putting analysis (SAM PuttLab)", "value": true}
  ],
  "knowsAbout": [
   "Golf lessons",
@@ -681,7 +713,7 @@ body.drawer-open .drawer{transform:none}
         <li><button class="menu-a" type="button" aria-expanded="false" aria-controls="dd-about">About<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
           <ul class="dd" id="dd-about">
             <li><a href="#joey">Joey Sandoval</a></li>
-            <li><a href="#ryan">Ryan Hogan</a></li>
+            <li><a href="#studio">The studio</a></li>
             <li><a href="#reviews">Reviews</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact and hours</a></li>
@@ -712,7 +744,7 @@ body.drawer-open .drawer{transform:none}
         <ul class="dg" id="dg-tech"><li><a href="#" data-demo>Robotic swing trainer (RoboGolfPro)</a></li><li><a href="#" data-demo>Golf simulators (TrackMan)</a></li><li><a href="#" data-demo>3D swing analysis (Sportsbox AI)</a></li><li><a href="#" data-demo>Putting analysis (SAM PuttLab)</a></li><li><a href="#" data-demo>Putting green (PuttView)</a></li></ul></li>
       <li><a class="dl-a" href="#" data-demo>Fitness</a></li>
       <li><button class="dg-btn" type="button" aria-expanded="false" aria-controls="dg-about">About<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
-        <ul class="dg" id="dg-about"><li><a href="#joey">Joey Sandoval</a></li><li><a href="#ryan">Ryan Hogan</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact and hours</a></li></ul></li>
+        <ul class="dg" id="dg-about"><li><a href="#joey">Joey Sandoval</a></li><li><a href="#studio">The studio</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact and hours</a></li></ul></li>
     </ul>
     <div class="drawer-foot">
       <a class="b b-s" href="tel:+12398491902">Call (239) 849-1902</a>
@@ -736,7 +768,7 @@ body.drawer-open .drawer{transform:none}
     <h1 id="heroH">Golf lessons in Naples<br> that hold up on the&nbsp;course</h1>
     <div class="hero-row">
       <div class="hero-side">
-        <p class="lede">Private lessons with a robotic swing trainer, TrackMan and 3D swing analysis<span class="more">, turned into a plan you can practice and take to the&nbsp;course</span>.</p>
+        <p class="lede">Private lessons with a robotic swing trainer, TrackMan and 3D swing analysis<span class="more">, turned into a plan you can practice and take to the first&nbsp;tee</span>.</p>
         <a class="rating" href="#reviews"><span class="st" aria-hidden="true">★★★★★</span><b>5.0</b> on Google · 31 reviews</a>
       </div>
       <div class="acts">
@@ -798,24 +830,19 @@ body.drawer-open .drawer{transform:none}
   </div>
 </section>
 
-<section class="sec ryan" id="ryan" aria-labelledby="ryanH">
+<section class="sec studio" id="studio" aria-labelledby="studioH">
   <div class="wrap">
-    <div class="ryan-copy">
-      <h2 class="h2" id="ryanH">Lessons with Ryan Hogan</h2>
-      <p>Ryan coaches for the course. He takes what the robot, TrackMan and the 3D analysis show you and boils it down to a few things you can practice and play with.</p>
-      <ul class="ryan-list">
-        <li><b>Lesson plus practice</b><span>15 to 20 minutes of instruction, then 30 to 40 minutes of guided practice, mobility or routine work.</span></li>
-        <li><b>Practice planning</b><span>A practice plan and program built around your game, so range time carries to the course.</span></li>
-        <li><b>Mental performance coaching</b><span>Instruction for your routines, focus and decisions over the ball.</span></li>
-        <li><b>Speed training class</b><span>Group class for adding clubhead speed. Coming soon.</span></li>
-        <li><b>Warm-up clinic</b><span>A personalized warm-up built for injury prevention and better play from the first tee. Coming soon.</span></li>
-      </ul>
-      <a class="b b-p" href="tel:+12398491902">Call to book with Ryan</a>
+    <div class="studio-head">
+      <h2 class="h2" id="studioH">An indoor golf studio in North&nbsp;Naples</h2>
+      <p class="lede">Four golf simulator bays, a robotic swing trainer, 3D swing analysis and a putting green that shows you the read, all under one roof on Premier&nbsp;Way.</p>
     </div>
-    <figure class="ryan-fig">
-      <img src="assets/img/ryan-hogan-golf-instructor-tgc-naples.jpg" alt="Golf instructor Ryan Hogan at the top of his swing on a Southwest Florida range" width="720" height="900" loading="lazy">
-      <figcaption>Ryan Hogan, golf instructor. Photo: Bold Vision Productions.</figcaption>
-    </figure>
+    <ul class="tour">
+      <li class="t-big"><figure><img src="assets/img/indoor-golf-studio-naples-tgc.jpg" alt="Inside The Golf Club's indoor golf studio in Naples: a golfer putting on the indoor green with simulator bays and the swing robot behind him" width="1200" height="646" loading="lazy"><figcaption><b>Indoor putting green and simulator bays</b>Inside the studio on Premier Way</figcaption></figure></li>
+      <li><figure><img src="assets/img/golf-simulator-bay-trackman-tgc-naples.jpg" alt="A golfer finishing a swing in a TrackMan golf simulator bay with his ball data on the screen" width="800" height="600" loading="lazy"><figcaption><b>Golf simulators</b>4 TrackMan bays</figcaption></figure></li>
+      <li><figure><img src="assets/img/robotic-swing-trainer-robogolfpro-tgc-naples.jpg" alt="A golfer swinging with the RoboGolfPro robotic swing trainer guiding his club" width="800" height="600" loading="lazy"><figcaption><b>Robotic swing trainer</b>RoboGolfPro</figcaption></figure></li>
+      <li><figure><img src="assets/img/3d-swing-analysis-sportsbox-tgc-naples.jpg" alt="A 3D model of a golfer's swing on the Sportsbox AI screen with chest and pelvis numbers" width="800" height="600" loading="lazy"><figcaption><b>3D swing analysis</b>Sportsbox AI</figcaption></figure></li>
+      <li><figure><img src="assets/img/putting-green-puttview-tgc-naples.jpg" alt="Break lines and aim arrows projected onto the indoor putting green" width="800" height="600" loading="lazy"><figcaption><b>Putting green with projected reads</b>PuttView</figcaption></figure></li>
+    </ul>
   </div>
 </section>
 
@@ -838,12 +865,17 @@ body.drawer-open .drawer{transform:none}
       <article class="pcard on" id="pc-lessons" role="tabpanel" aria-labelledby="pt-lessons">
         <h3>Lessons</h3>
         <p class="pbig"><b>$250</b><span>an hour, robot-guided lesson</span></p>
-        <p class="pdesc">On the RoboGolfPro swing trainer. Private lessons with Joey or Ryan for every age and level: ask for rates and packages.</p>
+        <p class="pdesc">One-on-one with Joey, for every age and&nbsp;level.</p>
+        <ul class="prows">
+          <li><span>Robot-guided lesson<small>RoboGolfPro</small></span><b>$250 / hr</b></li>
+          <li><span>Private and group lessons<small>Rates and packages</small></span><b>Ask</b></li>
+        </ul>
         <a class="svc-go" href="https://app.cloudstudiomanager.com/book/thegolfclub" target="_blank" rel="noopener">Book a lesson<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
       </article>
       <article class="pcard" id="pc-members" role="tabpanel" aria-labelledby="pt-members">
         <h3>Memberships</h3>
         <p class="pbig"><b>$185</b><span>a month and up</span></p>
+        <p class="pdesc">Bay time every month, on two&nbsp;plans.</p>
         <ul class="prows">
           <li><span>Essentials<small>12 one-hour bay rentals a month</small></span><b>$185 / mo</b></li>
           <li><span>Unlimited Performance<small>Unlimited bay rentals</small></span><b>$300 / mo</b></li>
@@ -853,7 +885,7 @@ body.drawer-open .drawer{transform:none}
       <article class="pcard" id="pc-programs" role="tabpanel" aria-labelledby="pt-programs">
         <h3>Training programs</h3>
         <p class="pbig"><b>$1,000</b><span>for 3 months</span></p>
-        <p class="pdesc">Every month: 10 bay rentals and 1 private lesson.</p>
+        <p class="pdesc">Every month: 10 bay rentals and 1&nbsp;private&nbsp;lesson.</p>
         <ul class="prows">
           <li><span>3 months<small>Game Improvement</small></span><b>$1,000</b></li>
           <li><span>6 months<small>Performance Plus</small></span><b>$2,000</b></li>
@@ -864,7 +896,11 @@ body.drawer-open .drawer{transform:none}
       <article class="pcard" id="pc-bays" role="tabpanel" aria-labelledby="pt-bays">
         <h3>Practice bay</h3>
         <p class="pbig"><b>$65</b><span>an hour</span></p>
-        <p class="pdesc">A TrackMan bay with Sportsbox AI software and a putting green, when one is open. Group rates available.</p>
+        <p class="pdesc">A TrackMan bay and putting green, when one is&nbsp;open.</p>
+        <ul class="prows">
+          <li><span>One hour<small>TrackMan bay</small></span><b>$65 / hr</b></li>
+          <li><span>Groups<small>Group rates</small></span><b>Ask</b></li>
+        </ul>
         <a class="svc-go" href="https://app.cloudstudiomanager.com/book/thegolfclub" target="_blank" rel="noopener">Book a bay<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
       </article>
     </div>
@@ -970,7 +1006,7 @@ body.drawer-open .drawer{transform:none}
       <div class="fl"><h2>Bays and fitting</h2><button class="fl-btn" type="button" aria-expanded="false" aria-controls="fl2">Bays and fitting<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
         <ul id="fl2"><li><a href="#prices">Bay rentals</a></li><li><a href="#prices">Memberships</a></li><li><a href="#" data-demo>Golf club fitting</a></li><li><a href="#" data-demo>Putter fitting</a></li><li><a href="#" data-demo>Technology</a></li></ul></div>
       <div class="fl"><h2>About</h2><button class="fl-btn" type="button" aria-expanded="false" aria-controls="fl3">About<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
-        <ul id="fl3"><li><a href="#joey">Joey Sandoval</a></li><li><a href="#ryan">Ryan Hogan</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#" data-demo>Gift cards</a></li></ul></div>
+        <ul id="fl3"><li><a href="#joey">Joey Sandoval</a></li><li><a href="#studio">The studio</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#" data-demo>Gift cards</a></li></ul></div>
     </div>
   </div>
   <div class="foot-bot">
